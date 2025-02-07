@@ -80,6 +80,8 @@ public class Lab3_p2_SalvadorMacias {
         int numero_puertas = lea.nextInt();
         System.out.println("Ingrese el tipo de transmision: ");
         String tipo_transmion = str.nextLine();
+        autos.add(new Auto(numero_puertas, tipo_transmion, placa, marca, modelo, year, tipo_combustible, hora_entrada));
+        lista.add(new Auto(numero_puertas, tipo_transmion, placa, marca, modelo, year, tipo_combustible, hora_entrada));
 
     }//fin auto
 
@@ -100,17 +102,30 @@ public class Lab3_p2_SalvadorMacias {
         int cilindraje = lea.nextInt();
         System.out.println("Indique si tiene baul [s/n]: ");
         String baul = str.nextLine();
+        motocicletas.add(new Motocicleta(cilindraje, baul, placa, marca, modelo, year, tipo_combustible, hora_entrada));
+        lista.add(new Motocicleta(cilindraje, baul, placa, marca, modelo, year, tipo_combustible, hora_entrada));
+        
     }//fin moto
 
     public static void agregar_camion() {
-        /*
-         private String placa;
-    private String marca;
-    private String modelo;
-    private int year;
-    private String tipo_combustible;
-    private int hora_entrada;
-         */
+        System.out.println("Ingrese la placa: ");
+        String placa = str.nextLine();
+        System.out.println("Ingrese la marca: ");
+        String marca = str.nextLine();
+        System.out.println("Ingrese el modelo: ");
+        String modelo = str.nextLine();
+        System.out.println("ingrese el año: ");
+        int year = lea.nextInt();
+        System.out.println("ingrese el tipo de combustible: ");
+        String tipo_combustible = str.nextLine();
+        System.out.println("Ingrese la hora de entrada: ");
+        int hora_entrada = lea.nextInt();
+        System.out.println("Ingrese el numero de ejes: ");
+        int ejes = lea.nextInt();
+        System.out.println("Ingrese el tipo de carga: ");
+        String tipo_carga = str.nextLine();
+        camiones.add(new Camion(ejes, tipo_carga, placa, marca, modelo, year, tipo_combustible, hora_entrada));
+        lista.add(new Camion(ejes, tipo_carga, placa, marca, modelo, year, tipo_combustible, hora_entrada));
 
     }//fin camion
 
