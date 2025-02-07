@@ -161,6 +161,11 @@ public class Lab3_p2_SalvadorMacias {
     }//fin camion
 
     public static void listar_todo() {
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println(i + 1 + "-" + "vehiculo: ");
+
+            //System.out.println(i + "-" + correos.get(i));
+        }
     }//fin listar todo
 
     public static void listar_autos() {
