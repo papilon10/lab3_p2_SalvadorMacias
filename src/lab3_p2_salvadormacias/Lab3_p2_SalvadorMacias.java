@@ -103,10 +103,34 @@ public class Lab3_p2_SalvadorMacias {
                 break;
                 case 3: {
                     System.out.println("---actualizar vehiculos---");
-                    listar_todo();
-                    System.out.println("Ingrese el indice de la posicion a modificar: ");
-                    int mod_pos = lea.nextInt();
-                    lista.get(mod_pos);
+                    System.out.println("1.lista de autos");
+                    System.out.println("2.lista de motos");
+                    System.out.println("3.lista de camiones");
+                    System.out.println("Ingrese la lista que desea ingresar a modificar: ");
+                    int mod_opc = lea.nextInt();
+                    switch (mod_opc) {
+                        case 1: {
+                            System.out.println("---\nlista de autos---");
+                            mod_autos(autos);
+                        }
+
+                        break;
+                        case 2: {
+                            System.out.println("---\nlista de motos---");
+                            mod_motos(motocicletas);
+                        }
+
+                        break;
+                        case 3: {
+                            System.out.println("---\nlista de camiones---");
+                            mod_camiones(camiones);
+                            
+                        }
+
+                        break;
+                        default:
+                            System.out.println("opcion ingresada es incorrecta...");
+                    }
 
                 }
                 break;
@@ -292,8 +316,7 @@ public class Lab3_p2_SalvadorMacias {
         modificar.setHora_entrada(hora_entrada);
         modificar.setEjes(ejes);
         modificar.setTipo_carga(tipo_carga);
-                
-             
+
         System.out.println("La información fue actualizada");
 
         return camiones;
