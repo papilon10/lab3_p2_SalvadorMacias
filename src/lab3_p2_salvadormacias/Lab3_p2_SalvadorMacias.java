@@ -107,7 +107,6 @@ public class Lab3_p2_SalvadorMacias {
                     System.out.println("Ingrese el indice de la posicion a modificar: ");
                     int mod_pos = lea.nextInt();
                     lista.get(mod_pos);
-                    
 
                 }
                 break;
@@ -225,14 +224,46 @@ public class Lab3_p2_SalvadorMacias {
         }
     }//fin listar camiones
 
-    public static void mod_camiones() {
+    public static ArrayList mod_motos(ArrayList<Motocicleta> motocicletas) {
+        listar_moto();
+        System.out.println("Cual es la posicion de la motocicleta a modificar: ");
+        int pos_ModMotos = lea.nextInt();
+
+        Motocicleta modificar = motocicletas.get(pos_ModMotos);
+
+        System.out.println("Ingrese la placa: ");
+        String placa = str.nextLine();
+        System.out.println("Ingrese la marca: ");
+        String marca = str.nextLine();
+        System.out.println("Ingrese el modelo: ");
+        String modelo = str.nextLine();
+        System.out.println("ingrese el año: ");
+        int year = lea.nextInt();
+        System.out.println("ingrese el tipo de combustible: ");
+        String tipo_combustible = str.nextLine();
+        System.out.println("Ingrese la hora de entrada: ");
+        int hora_entrada = lea.nextInt();
+        System.out.println("Ingrese el cilindraje: ");
+        int cilindraje = lea.nextInt();
+        System.out.println("Indique si tiene baul [s/n]: ");
+        String baul = str.nextLine();
+
+        modificar.setMarca(marca);
+        modificar.setModelo(modelo);
+        modificar.setYear(year);
+        modificar.setTipo_combustible(tipo_combustible);
+        modificar.setHora_entrada(hora_entrada);
+        modificar.setCilindraje(cilindraje);
+        modificar.setBaul(baul);
+
+        System.out.println("La información fue actualizada");
+
+        return motocicletas;
     }
 
-    public static void mod_motos() {
-    }
-
-    public static void marcar_salida() {
-    }
+    
+    
+   
 
     public static ArrayList<Auto> mod_autos(ArrayList<Auto> autos) {
         listar_autos();
@@ -243,7 +274,6 @@ public class Lab3_p2_SalvadorMacias {
 
         System.out.println("Ingrese la placa: ");
         String placa = str.nextLine();
-
         System.out.println("Ingrese la marca: ");
         String marca = str.nextLine();
         System.out.println("Ingrese el modelo: ");
@@ -270,6 +300,9 @@ public class Lab3_p2_SalvadorMacias {
         System.out.println("La información fue actualizada");
 
         return autos;
+    }
+    
+     public static void marcar_salida() {
     }
 
 }//fin clase
