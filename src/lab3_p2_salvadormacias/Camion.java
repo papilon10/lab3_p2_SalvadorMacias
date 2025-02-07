@@ -39,7 +39,7 @@ public class Camion extends Vehiculo{
 
     @Override
     public String toString() {
-        return super.toString()+ "Camion{" + "ejes=" + ejes + ", tipo_carga=" + tipo_carga + '}';
+        return super.toString()+ "numero de ejes del camion: "+ejes+ "tipo de carga: "+ tipo_carga;
     }
     
     

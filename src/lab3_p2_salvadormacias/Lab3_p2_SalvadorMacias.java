@@ -306,14 +306,14 @@ public class Lab3_p2_SalvadorMacias {
 
     public static void listar_todo() {
         for (int i = 0; i < lista.size(); i++) {
-            System.out.println(i + 1 + "-" + "vehiculo: ");
+            System.out.println(i + 1 + "-" + "vehiculo: "+lista.get(i));
 
         }
     }//fin listar todo
 
     public static void listar_autos() {
         for (int i = 0; i < autos.size(); i++) {
-            System.out.println(i + 1 + "-" + "vehiculo: ");
+            System.out.println(i + 1 + "-" + "auto: "+autos.get(i));
 
         }
 
@@ -321,7 +321,7 @@ public class Lab3_p2_SalvadorMacias {
 
     public static void listar_moto() {
         for (int i = 0; i < motocicletas.size(); i++) {
-            System.out.println(i + 1 + "-" + "vehiculo: ");
+            System.out.println(i + 1 + "-" + "motocicleta: "+motocicletas.get(i));
 
         }
 
@@ -329,7 +329,7 @@ public class Lab3_p2_SalvadorMacias {
 
     public static void listar_camiones() {
         for (int i = 0; i < camiones.size(); i++) {
-            System.out.println(i + 1 + "-" + "vehiculo: ");
+            System.out.println(i + 1 + "-" + "camion: "+camiones.get(i));
 
         }
     }//fin listar camiones

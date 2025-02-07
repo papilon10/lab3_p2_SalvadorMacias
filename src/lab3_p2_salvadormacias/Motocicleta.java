@@ -40,7 +40,7 @@ public class Motocicleta extends Vehiculo {
 
     @Override
     public String toString() {
-        return super.toString() + "Motocicleta{" + "cilindraje=" + cilindraje + ", baul=" + baul + '}';
+        return super.toString() + "cilindraje de la motocicleta: "+cilindraje+ "estado de baul: " + baul;
     }
 
 }

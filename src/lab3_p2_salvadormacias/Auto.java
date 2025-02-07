@@ -40,7 +40,7 @@ public class Auto extends Vehiculo {
 
     @Override
     public String toString() {
-        return super.toString() + "Auto{" + "numero_puertas=" + numero_puertas + ", tipo_transmision=" + tipo_transmision + '}';
+        return super.toString() + "numero de puertas del auto: "+numero_puertas+ "tipo de transmision del auto: "+ tipo_transmision;
     }
 
 }
