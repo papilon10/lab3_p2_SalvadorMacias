@@ -23,7 +23,18 @@ public class Lab3_p2_SalvadorMacias {
     public static ArrayList<Camion> camiones = new ArrayList();
     public static ArrayList lista = new ArrayList();
 
+    public static String tipo_combustible;
+
     public static void main(String[] args) {
+
+        Auto auto1 = new Auto(2, "automatica", "HAZ3590", "honda", "accord", 2000, "diesel", 0);
+        Motocicleta motocicleta1 = new Motocicleta(200, "n", "AXK2333", "suzuki", "raptor", 2020, "regular", 0);
+        Camion camionsito = new Camion(6, "construccion", "MAX1000", "Mercedes", "V200", 2014, "gasolina", 0);
+
+        lista.add(auto1);
+        lista.add(motocicleta1);
+        lista.add(camionsito);
+
         boolean salida = false;
         do {
             System.out.println("---Menu principal---");
@@ -124,7 +135,7 @@ public class Lab3_p2_SalvadorMacias {
                         case 3: {
                             System.out.println("---\nlista de camiones---");
                             mod_camiones(camiones);
-                            
+
                         }
 
                         break;
@@ -161,14 +172,28 @@ public class Lab3_p2_SalvadorMacias {
         String modelo = str.nextLine();
         System.out.println("ingrese el año: ");
         int year = lea.nextInt();
-        System.out.println("ingrese el tipo de combustible: ");
-        String tipo_combustible = str.nextLine();
+
+        // String tipo_combustible = str.nextLine();
         System.out.println("Ingrese la hora de entrada: ");
         int hora_entrada = lea.nextInt();
         System.out.println("Ingrese el numero de puertas: ");
         int numero_puertas = lea.nextInt();
         System.out.println("Ingrese el tipo de transmision: ");
         String tipo_transmion = str.nextLine();
+        System.out.println("ingrese el tipo de combustible: ");
+        System.out.println("1.Diesel");
+        System.out.println("2.regular");
+        System.out.println("3.gasolina");
+        int tipo_c = lea.nextInt();
+        if (tipo_c == 1) {
+            tipo_combustible = "diesel";
+        } else if (tipo_c == 2) {
+            tipo_combustible = "regular";
+        } else if (tipo_c == 3) {
+            tipo_combustible = "gasolina";
+        } else {
+            System.out.println("combustible ingresado no es validp");
+        }
         autos.add(new Auto(numero_puertas, tipo_transmion, placa, marca, modelo, year, tipo_combustible, hora_entrada));
         lista.add(new Auto(numero_puertas, tipo_transmion, placa, marca, modelo, year, tipo_combustible, hora_entrada));
 
@@ -183,14 +208,26 @@ public class Lab3_p2_SalvadorMacias {
         String modelo = str.nextLine();
         System.out.println("ingrese el año: ");
         int year = lea.nextInt();
-        System.out.println("ingrese el tipo de combustible: ");
-        String tipo_combustible = str.nextLine();
         System.out.println("Ingrese la hora de entrada: ");
         int hora_entrada = lea.nextInt();
         System.out.println("Ingrese el cilindraje: ");
         int cilindraje = lea.nextInt();
         System.out.println("Indique si tiene baul [s/n]: ");
         String baul = str.nextLine();
+        System.out.println("ingrese el tipo de combustible: ");
+        System.out.println("1.Diesel");
+        System.out.println("2.regular");
+        System.out.println("3.gasolina");
+        int tipo_c = lea.nextInt();
+        if (tipo_c == 1) {
+            tipo_combustible = "diesel";
+        } else if (tipo_c == 2) {
+            tipo_combustible = "regular";
+        } else if (tipo_c == 3) {
+            tipo_combustible = "gasolina";
+        } else {
+            System.out.println("combustible ingresado no es validp");
+        }
         motocicletas.add(new Motocicleta(cilindraje, baul, placa, marca, modelo, year, tipo_combustible, hora_entrada));
         lista.add(new Motocicleta(cilindraje, baul, placa, marca, modelo, year, tipo_combustible, hora_entrada));
 
@@ -205,14 +242,26 @@ public class Lab3_p2_SalvadorMacias {
         String modelo = str.nextLine();
         System.out.println("ingrese el año: ");
         int year = lea.nextInt();
-        System.out.println("ingrese el tipo de combustible: ");
-        String tipo_combustible = str.nextLine();
         System.out.println("Ingrese la hora de entrada: ");
         int hora_entrada = lea.nextInt();
         System.out.println("Ingrese el numero de ejes: ");
         int ejes = lea.nextInt();
         System.out.println("Ingrese el tipo de carga: ");
         String tipo_carga = str.nextLine();
+        System.out.println("ingrese el tipo de combustible: ");
+        System.out.println("1.Diesel");
+        System.out.println("2.regular");
+        System.out.println("3.gasolina");
+        int tipo_c = lea.nextInt();
+        if (tipo_c == 1) {
+            tipo_combustible = "diesel";
+        } else if (tipo_c == 2) {
+            tipo_combustible = "regular";
+        } else if (tipo_c == 3) {
+            tipo_combustible = "gasolina";
+        } else {
+            System.out.println("combustible ingresado no es validp");
+        }
         camiones.add(new Camion(ejes, tipo_carga, placa, marca, modelo, year, tipo_combustible, hora_entrada));
         lista.add(new Camion(ejes, tipo_carga, placa, marca, modelo, year, tipo_combustible, hora_entrada));
 
@@ -263,14 +312,26 @@ public class Lab3_p2_SalvadorMacias {
         String modelo = str.nextLine();
         System.out.println("ingrese el año: ");
         int year = lea.nextInt();
-        System.out.println("ingrese el tipo de combustible: ");
-        String tipo_combustible = str.nextLine();
         System.out.println("Ingrese la hora de entrada: ");
         int hora_entrada = lea.nextInt();
         System.out.println("Ingrese el cilindraje: ");
         int cilindraje = lea.nextInt();
         System.out.println("Indique si tiene baul [s/n]: ");
         String baul = str.nextLine();
+        System.out.println("ingrese el tipo de combustible: ");
+        System.out.println("1.Diesel");
+        System.out.println("2.regular");
+        System.out.println("3.gasolina");
+        int tipo_c = lea.nextInt();
+        if (tipo_c == 1) {
+            tipo_combustible = "diesel";
+        } else if (tipo_c == 2) {
+            tipo_combustible = "regular";
+        } else if (tipo_c == 3) {
+            tipo_combustible = "gasolina";
+        } else {
+            System.out.println("combustible ingresado no es validp");
+        }
 
         modificar.setMarca(marca);
         modificar.setModelo(modelo);
@@ -300,14 +361,26 @@ public class Lab3_p2_SalvadorMacias {
         String modelo = str.nextLine();
         System.out.println("ingrese el año: ");
         int year = lea.nextInt();
-        System.out.println("ingrese el tipo de combustible: ");
-        String tipo_combustible = str.nextLine();
         System.out.println("Ingrese la hora de entrada: ");
         int hora_entrada = lea.nextInt();
         System.out.println("Ingrese el numero de ejes: ");
         int ejes = lea.nextInt();
         System.out.println("Ingrese el tipo de carga: ");
         String tipo_carga = str.nextLine();
+        System.out.println("ingrese el tipo de combustible: ");
+        System.out.println("1.Diesel");
+        System.out.println("2.regular");
+        System.out.println("3.gasolina");
+        int tipo_c = lea.nextInt();
+        if (tipo_c == 1) {
+            tipo_combustible = "diesel";
+        } else if (tipo_c == 2) {
+            tipo_combustible = "regular";
+        } else if (tipo_c == 3) {
+            tipo_combustible = "gasolina";
+        } else {
+            System.out.println("combustible ingresado no es validp");
+        }
 
         modificar.setMarca(marca);
         modificar.setModelo(modelo);
@@ -337,14 +410,26 @@ public class Lab3_p2_SalvadorMacias {
         String modelo = str.nextLine();
         System.out.println("ingrese el año: ");
         int year = lea.nextInt();
-        System.out.println("ingrese el tipo de combustible: ");
-        String tipo_combustible = str.nextLine();
         System.out.println("Ingrese la hora de entrada: ");
         int hora_entrada = lea.nextInt();
         System.out.println("Ingrese el numero de puertas: ");
         int numero_puertas = lea.nextInt();
         System.out.println("Ingrese el tipo de transmision: ");
         String tipo_transmion = str.nextLine();
+        System.out.println("ingrese el tipo de combustible: ");
+        System.out.println("1.Diesel");
+        System.out.println("2.regular");
+        System.out.println("3.gasolina");
+        int tipo_c = lea.nextInt();
+        if (tipo_c == 1) {
+            tipo_combustible = "diesel";
+        } else if (tipo_c == 2) {
+            tipo_combustible = "regular";
+        } else if (tipo_c == 3) {
+            tipo_combustible = "gasolina";
+        } else {
+            System.out.println("combustible ingresado no es validp");
+        }
 
         modificar.setMarca(marca);
         modificar.setModelo(modelo);
