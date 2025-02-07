@@ -62,39 +62,72 @@ public class Lab3_p2_SalvadorMacias {
                 != true);//fin while
 
     }//fin main
-    
-    public static void agregar_auto(){
-    
+
+    public static void agregar_auto() {
+        System.out.println("Ingrese la placa: ");
+        String placa = str.nextLine();
+        System.out.println("Ingrese la marca: ");
+        String marca = str.nextLine();
+        System.out.println("Ingrese el modelo: ");
+        String modelo = str.nextLine();
+        System.out.println("ingrese el año: ");
+        int year = lea.nextInt();
+        System.out.println("ingrese el tipo de combustible: ");
+        String tipo_combustible = str.nextLine();
+        System.out.println("Ingrese la hora de entrada: ");
+        int hora_entrada = lea.nextInt();
+        System.out.println("Ingrese el numero de puertas: ");
+        int numero_puertas = lea.nextInt();
+        System.out.println("Ingrese el tipo de transmision: ");
+        String tipo_transmion = str.nextLine();
+
     }//fin auto
-    
-     public static void agregar_moto(){
-    
+
+    public static void agregar_moto() {
+        /* private String placa;
+    private String marca;
+    private String modelo;
+    private int year;
+    private String tipo_combustible;
+    private int hora_entrada;
+         */
     }//fin moto
-     
-     public static void agregar_camion(){
-    
+
+    public static void agregar_camion() {
+        /*
+         private String placa;
+    private String marca;
+    private String modelo;
+    private int year;
+    private String tipo_combustible;
+    private int hora_entrada;
+         */
+
     }//fin camion
-     
-     public static void listar_todo(){
-     }//fin listar todo
-     
-     public static void listar_autos(){
-     }//fin listar autos
-     
-     public static void listar_moto(){
-     
-     }//fin listar moto
-     
-     public static void listar_camiones(){
-     }//fin listar camiones
-     
-     public static void mod_autos(){}
-     
-     public static void mod_camiones(){}
-     
-     public static void mod_motos(){}
-     
-     public static void marcar_salida(){}
-     
+
+    public static void listar_todo() {
+    }//fin listar todo
+
+    public static void listar_autos() {
+    }//fin listar autos
+
+    public static void listar_moto() {
+
+    }//fin listar moto
+
+    public static void listar_camiones() {
+    }//fin listar camiones
+
+    public static void mod_autos() {
+    }
+
+    public static void mod_camiones() {
+    }
+
+    public static void mod_motos() {
+    }
+
+    public static void marcar_salida() {
+    }
 
 }//fin clase
