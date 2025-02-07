@@ -263,7 +263,23 @@ public class Lab3_p2_SalvadorMacias {
         System.out.println("Ingrese el numero de ejes: ");
         int ejes = lea.nextInt();
         System.out.println("Ingrese el tipo de carga: ");
-        String tipo_carga = str.nextLine();
+        System.out.println("1.materiales de construccion");
+        System.out.println("2.paqueteria");
+        System.out.println("3.alimentos");
+        int tipo_car = lea.nextInt();
+        if (tipo_car == 1) {
+            tipo_carga = "materiales de construccion";
+
+        } else if (tipo_car == 2) {
+            tipo_carga = "paqueteria";
+
+        } else if (tipo_car == 3) {
+            tipo_carga = "alimentos";
+
+        } else {
+            System.out.println("el tipo de carga ingresado es invalido...");
+        }
+
         System.out.println("ingrese el tipo de combustible: ");
         System.out.println("1.Diesel");
         System.out.println("2.regular");
