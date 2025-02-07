@@ -84,13 +84,22 @@ public class Lab3_p2_SalvadorMacias {
     }//fin auto
 
     public static void agregar_moto() {
-        /* private String placa;
-    private String marca;
-    private String modelo;
-    private int year;
-    private String tipo_combustible;
-    private int hora_entrada;
-         */
+        System.out.println("Ingrese la placa: ");
+        String placa = str.nextLine();
+        System.out.println("Ingrese la marca: ");
+        String marca = str.nextLine();
+        System.out.println("Ingrese el modelo: ");
+        String modelo = str.nextLine();
+        System.out.println("ingrese el año: ");
+        int year = lea.nextInt();
+        System.out.println("ingrese el tipo de combustible: ");
+        String tipo_combustible = str.nextLine();
+        System.out.println("Ingrese la hora de entrada: ");
+        int hora_entrada = lea.nextInt();
+        System.out.println("Ingrese el cilindraje: ");
+        int cilindraje = lea.nextInt();
+        System.out.println("Indique si tiene baul [s/n]: ");
+        String baul = str.nextLine();
     }//fin moto
 
     public static void agregar_camion() {
