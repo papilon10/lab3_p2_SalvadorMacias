@@ -4,6 +4,9 @@
  */
 package lab3_p2_salvadormacias;
 
+import java.time.Duration;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,7 +24,7 @@ public class Lab3_p2_SalvadorMacias {
     public static ArrayList<Auto> autos = new ArrayList();
     public static ArrayList<Motocicleta> motocicletas = new ArrayList();
     public static ArrayList<Camion> camiones = new ArrayList();
-    public static ArrayList lista = new ArrayList();
+    public static ArrayList <Vehiculo> lista= new ArrayList();
 
     public static String tipo_combustible;
     public static String tipo_transmision;
@@ -115,7 +118,7 @@ public class Lab3_p2_SalvadorMacias {
                 }
                 break;
                 case 3: {
-                    System.out.println("---actualizar vehiculos---");
+                    System.out.println("---\nactualizar vehiculos---");
                     System.out.println("1.lista de autos");
                     System.out.println("2.lista de motos");
                     System.out.println("3.lista de camiones");
@@ -148,6 +151,8 @@ public class Lab3_p2_SalvadorMacias {
                 }
                 break;
                 case 4: {
+                    System.out.println("---\nmarcar salida---");
+                    marcar_salida();
 
                 }
                 break;
@@ -442,8 +447,9 @@ public class Lab3_p2_SalvadorMacias {
         String modelo = str.nextLine();
         System.out.println("ingrese el año: ");
         int year = lea.nextInt();
-        System.out.println("Ingrese la hora de entrada: ");
-        int hora_entrada = lea.nextInt();
+        //System.out.println("Ingrese la hora de entrada: ");
+        //int hora_entrada = lea.nextInt();
+        LocalTime horaEntrada;
         System.out.println("Ingrese el numero de puertas: ");
         int numero_puertas = lea.nextInt();
         System.out.println("Ingrese el tipo de transmision: ");
@@ -467,7 +473,7 @@ public class Lab3_p2_SalvadorMacias {
         modificar.setModelo(modelo);
         modificar.setYear(year);
         modificar.setTipo_combustible(tipo_combustible);
-        modificar.setHora_entrada(hora_entrada);
+        // modificar.setHora_entrada(hora_entrada);
         modificar.setNumero_puertas(numero_puertas);
         modificar.setTipo_transmision(tipo_transmion);
 
@@ -477,6 +483,22 @@ public class Lab3_p2_SalvadorMacias {
     }
 
     public static void marcar_salida() {
+         for (int i = 0; i < lista.size(); i++) {
+            System.out.println(i + 1 + "-" + lista.get(i));
+             System.out.println("ingrese el vehiculo que saldra del sistema: ");
+             int pos_salida = lea.nextInt();
+             lista.remove(pos_salida);
+             System.out.println("el vehiculo ha salido del sistema...");
+
+        }
+         
     }
 
-}//fin clase
+   /* public static void DiferenciaTiempo() {
+        LocalTime horaSalida = LocalTime.now().truncatedTo(ChronoUnit.SECONDS);
+Duration tiempoTotal = Duration.between(ArrayList get(indice). getHoraEntrada(), horaSalida
+        ) ;
+String stringTiempoTotal  = String format("802d: 802d: 802d", hours, minutes, seconds);
+    }*/
+
+    }//fin clase
