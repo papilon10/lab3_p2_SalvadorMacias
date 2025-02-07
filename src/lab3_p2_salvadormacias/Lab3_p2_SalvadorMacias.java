@@ -102,6 +102,12 @@ public class Lab3_p2_SalvadorMacias {
                 }
                 break;
                 case 3: {
+                    System.out.println("---actualizar vehiculos---");
+                    listar_todo();
+                    System.out.println("Ingrese el indice de la posicion a modificar: ");
+                    int mod_pos = lea.nextInt();
+                    lista.get(mod_pos);
+                    
 
                 }
                 break;
@@ -110,6 +116,7 @@ public class Lab3_p2_SalvadorMacias {
                 }
                 break;
                 case 5: {
+                    salida = true;
 
                 }
                 break;
@@ -218,9 +225,6 @@ public class Lab3_p2_SalvadorMacias {
         }
     }//fin listar camiones
 
-    public static void mod_autos() {
-    }
-
     public static void mod_camiones() {
     }
 
@@ -228,6 +232,44 @@ public class Lab3_p2_SalvadorMacias {
     }
 
     public static void marcar_salida() {
+    }
+
+    public static ArrayList<Auto> mod_autos(ArrayList<Auto> autos) {
+        listar_autos();
+        System.out.println("Cual es la posicion del auto a modificar: ");
+        int pos_ModCarros = lea.nextInt();
+
+        Auto modificar = autos.get(pos_ModCarros);
+
+        System.out.println("Ingrese la placa: ");
+        String placa = str.nextLine();
+
+        System.out.println("Ingrese la marca: ");
+        String marca = str.nextLine();
+        System.out.println("Ingrese el modelo: ");
+        String modelo = str.nextLine();
+        System.out.println("ingrese el año: ");
+        int year = lea.nextInt();
+        System.out.println("ingrese el tipo de combustible: ");
+        String tipo_combustible = str.nextLine();
+        System.out.println("Ingrese la hora de entrada: ");
+        int hora_entrada = lea.nextInt();
+        System.out.println("Ingrese el numero de puertas: ");
+        int numero_puertas = lea.nextInt();
+        System.out.println("Ingrese el tipo de transmision: ");
+        String tipo_transmion = str.nextLine();
+
+        modificar.setMarca(marca);
+        modificar.setModelo(modelo);
+        modificar.setYear(year);
+        modificar.setTipo_combustible(tipo_combustible);
+        modificar.setHora_entrada(hora_entrada);
+        modificar.setNumero_puertas(numero_puertas);
+        modificar.setTipo_transmision(tipo_transmion);
+
+        System.out.println("La información fue actualizada");
+
+        return autos;
     }
 
 }//fin clase
