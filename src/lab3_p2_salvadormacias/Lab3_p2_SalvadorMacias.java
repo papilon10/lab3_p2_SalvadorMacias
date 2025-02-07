@@ -70,6 +70,34 @@ public class Lab3_p2_SalvadorMacias {
                 }
                 break;
                 case 2: {
+                    System.out.println("\n---ver vehiculos---");
+                    System.out.println("1.ver todos");
+                    System.out.println("2.listar por tipo");
+                    System.out.println("Ingrese opcion: ");
+                    int opc_listar = lea.nextInt();
+                    switch (opc_listar) {
+                        case 1: {
+                            System.out.println("---\nlista de todos los vehiculos---");
+                            listar_todo();
+
+                        }
+
+                        break;
+                        case 2: {
+                            System.out.println("---\nlista de autos---");
+                            listar_autos();
+                            System.out.println("---\nlista de motocicletas---");
+                            listar_moto();
+                            System.out.println("---\nlista de camiones---");
+                            listar_camiones();
+
+                        }
+
+                        break;
+
+                        default:
+                            System.out.println("opcion ingresada es incorrecta...");
+                    }
 
                 }
                 break;
@@ -172,7 +200,7 @@ public class Lab3_p2_SalvadorMacias {
             System.out.println(i + 1 + "-" + "vehiculo: ");
 
         }
-        
+
     }//fin listar autos
 
     public static void listar_moto() {
