@@ -35,6 +35,37 @@ public class Lab3_p2_SalvadorMacias {
             int opc_menu = lea.nextInt();
             switch (opc_menu) {
                 case 1: {
+                    System.out.println("\n---agregar vehiculos---");
+                    System.out.println("1.agregar auto");
+                    System.out.println("2.agregar moto");
+                    System.out.println("3.agregar camion");
+                    System.out.println("ingrese opcion: ");
+                    int opc_Entrada = lea.nextInt();
+                    switch (opc_Entrada) {
+                        case 1: {
+                            System.out.println("---agregar auto---\n");
+                            agregar_auto();
+                            System.out.println("el auto se ha agregado exitosamente...");
+                        }
+
+                        break;
+                        case 2: {
+                            System.out.println("---agregar moto---\n");
+                            agregar_moto();
+                            System.out.println("la motocicleta se ha agregado exitosamente...");
+                        }
+
+                        break;
+                        case 3: {
+                            System.out.println("---agregar camion---\n");
+                            agregar_camion();
+                            System.out.println("el camion se ha agregado exitosamente...");
+                        }
+
+                        break;
+                        default:
+                            System.out.println("opcion ingresada es incorrecta...");
+                    }
 
                 }
                 break;
@@ -104,7 +135,7 @@ public class Lab3_p2_SalvadorMacias {
         String baul = str.nextLine();
         motocicletas.add(new Motocicleta(cilindraje, baul, placa, marca, modelo, year, tipo_combustible, hora_entrada));
         lista.add(new Motocicleta(cilindraje, baul, placa, marca, modelo, year, tipo_combustible, hora_entrada));
-        
+
     }//fin moto
 
     public static void agregar_camion() {
