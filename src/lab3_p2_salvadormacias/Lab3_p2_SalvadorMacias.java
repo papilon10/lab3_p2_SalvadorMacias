@@ -24,6 +24,8 @@ public class Lab3_p2_SalvadorMacias {
     public static ArrayList lista = new ArrayList();
 
     public static String tipo_combustible;
+    public static String tipo_transmision;
+    public static String tipo_carga;
 
     public static void main(String[] args) {
 
@@ -179,7 +181,21 @@ public class Lab3_p2_SalvadorMacias {
         System.out.println("Ingrese el numero de puertas: ");
         int numero_puertas = lea.nextInt();
         System.out.println("Ingrese el tipo de transmision: ");
-        String tipo_transmion = str.nextLine();
+        System.out.println("1.automatica");
+        System.out.println("2.manual");
+        System.out.println("3.continua variable");
+        int tipo_t = lea.nextInt();
+        if (tipo_t == 1) {
+            tipo_transmision = "automatica";
+
+        } else if (tipo_t == 2) {
+            tipo_transmision = "manual";
+        } else if (tipo_t == 3) {
+            tipo_transmision = "continua variable";
+
+        } else {
+            System.out.println("la transmision ingresada no existe");
+        }
         System.out.println("ingrese el tipo de combustible: ");
         System.out.println("1.Diesel");
         System.out.println("2.regular");
@@ -194,8 +210,8 @@ public class Lab3_p2_SalvadorMacias {
         } else {
             System.out.println("combustible ingresado no es validp");
         }
-        autos.add(new Auto(numero_puertas, tipo_transmion, placa, marca, modelo, year, tipo_combustible, hora_entrada));
-        lista.add(new Auto(numero_puertas, tipo_transmion, placa, marca, modelo, year, tipo_combustible, hora_entrada));
+        autos.add(new Auto(numero_puertas, tipo_transmision, placa, marca, modelo, year, tipo_combustible, hora_entrada));
+        lista.add(new Auto(numero_puertas, tipo_transmision, placa, marca, modelo, year, tipo_combustible, hora_entrada));
 
     }//fin auto
 
